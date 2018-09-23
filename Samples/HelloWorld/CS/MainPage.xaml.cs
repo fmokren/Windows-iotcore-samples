@@ -24,14 +24,19 @@ namespace HelloWorld
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        public MainPage()
+        public MainPage() => InitializeComponent();
+
+        int textIndex = 0;
+        string[] textMessages =
         {
-            InitializeComponent();
-        }
+            "Hello World!",
+            "Hello, Windows 10 IoT Core!"
+        };
 
         private void ClickMe_Click(object sender, RoutedEventArgs e)
         {
-            HelloMessage.Text = "Hello, Windows 10 IoT Core!";
+            textIndex = (textIndex + 1) % textMessages.Length;
+            HelloMessage.Text = textMessages[textIndex];
         }
     }
 }
