@@ -132,7 +132,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Documents\IoT\GrovePi\Software\CSharp\GrovePi\GrovePi.csproj">
+    <ProjectReference Include="..\GrovePi\GrovePi.csproj">
       <Project>{a667742a-b887-4b46-8ec1-c671e8bec5e4}</Project>
       <Name>GrovePi</Name>
     </ProjectReference>

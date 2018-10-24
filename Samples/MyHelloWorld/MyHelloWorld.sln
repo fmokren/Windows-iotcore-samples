@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyHelloWorld", "MyHelloWorld\MyHelloWorld.csproj", "{2A3AD9F2-A0E5-4F1F-B589-9E69F85648F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrovePi", "..\..\..\Documents\IoT\GrovePi\Software\CSharp\GrovePi\GrovePi.csproj", "{A667742A-B887-4B46-8EC1-C671E8BEC5E4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrovePi", "GrovePi\GrovePi.csproj", "{A667742A-B887-4B46-8EC1-C671E8BEC5E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
