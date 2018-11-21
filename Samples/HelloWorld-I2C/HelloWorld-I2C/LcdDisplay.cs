@@ -62,6 +62,9 @@ namespace HelloWorld_I2C
                 txtDevice = await I2cDevice.FromIdAsync(dis[0].Id, textConnectionSettings);
             }).Wait();
 
+            rgbDevice.Write(new byte[] { 0, 0, 1, 0 });
+            rgbDevice.Write(new byte[] { DisplayOnCommandAddress, 0xaa });
+
             txtDevice.Write(new[] { TextCommandAddress, (byte)(DisplayOnCommandAddress | NoCursorCommandAddress) });
             txtDevice.Write(new[] { TextCommandAddress, TwoLinesCommandAddress });
             ClearText();
@@ -78,10 +81,6 @@ namespace HelloWorld_I2C
 
         public void SetBacklightRgb(byte red, byte green, byte blue)
         {
-            //TODO: Find out what these addresses are for , set const.
-            rgbDevice.Write(new byte[] { 0, 0 });
-            rgbDevice.Write(new byte[] { 1, 0 });
-            rgbDevice.Write(new byte[] { DisplayOnCommandAddress, 0xaa });
             rgbDevice.Write(new[] { RedCommandAddress, red });
             rgbDevice.Write(new[] { GreenCommandAddress, green });
             rgbDevice.Write(new[] { BlueCommandAddress, blue });
